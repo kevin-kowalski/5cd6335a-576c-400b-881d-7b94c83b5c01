@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import Header from "./components/Header";
 
 interface LayoutProps {
   children: ReactElement;
@@ -7,7 +8,7 @@ interface LayoutProps {
 export default function Layout ({ children }: LayoutProps) {
   return (
     <>
-      <h1>Layout</h1>
+      <Header />
       {children}
     </>
   );
