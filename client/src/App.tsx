@@ -1,10 +1,23 @@
-import './app.scss';
+import './global.scss';
+import {
+  createBrowserRouter,
+  RouterProvider
+} from 'react-router-dom';
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <h1>Home</h1>
+  },
+  {
+    path: '/cart',
+    element: <h1>Cart</h1>
+  }
+]);
+
+export default function App() {
 
   return (
-    <h1 className='app'>App loads…</h1>
-  )
+    <RouterProvider router={router} />
+  );
 }
-
-export default App
